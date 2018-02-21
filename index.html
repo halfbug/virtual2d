@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Visualiser </title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/stylish-portfolio.css" rel="stylesheet">
+	
+	
+
+  </head>
+
+  <body id="page-top">
+    <!-- Navigation -->
+    <a class="menu-toggle rounded" href="#">
+      <i class="fa fa-bars"></i>
+    </a>
+    <nav id="sidebar-wrapper">
+      <ul class="sidebar-nav">
+        <li class="sidebar-brand">
+          <a class="js-scroll-trigger" href="#page-top">Visualiser</a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a class="js-scroll-trigger" href="#page-top">Select a Room</a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a class="js-scroll-trigger" href="#about">Decorate a Room</a>
+        </li>
+		<!--
+        <li class="sidebar-nav-item">
+          <a class="js-scroll-trigger" href="#services">Services</a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a class="js-scroll-trigger" href="#portfolio">Portfolio</a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a class="js-scroll-trigger" href="#contact">Contact</a>
+        </li>
+		-->
+      </ul>
+    </nav>
+
+    <!-- Header -->
+    <header class="masthead d-flex" id="maindisplay">
+      <div class="container text-center my-auto">
+        <h1 class="mb-1">Visualiser</h1>
+        <h3 class="mb-5">
+          <em>Design your room by your self</em>
+        </h3>
+        		
+		<button type="button" id="srbtn" class="btn btn-primary" data-toggle="modal" data-target="#selectroom">
+    Select a Room
+  </button>
+  
+  <button type="button" id="drbtn" class="btn btn-warning" style="display:none" data-toggle="modal" data-target="#decorateroom">
+    Decorate Room
+  </button>
+
+      <div class="overlay"></div>
+    </header>
+	
+	
+	<!-- The Modal -->
+  <div class="modal fade" id="selectroom">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Select the type of room you'd like to decorate</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+		
+		<div class="card-deck">
+  <div class="card">
+    <img class="card-img-top" src="images/kitchenicon.png" alt="Card image cap">
+	<div class="card-body">
+      
+    </div>
+    <div class="card-footer">
+	<button type="button" class="btn disabled btn-primary btn-lg btn-block">Kitchen</button>
+    
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="images/livingroom.png" height="234px" alt="Card image cap">
+	<div class="card-body">
+      
+    </div>
+    <div class="card-footer">
+      <button type="button" class="btn btn-primary disabled btn-lg btn-block">Living Room</button>
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="images/bathroom.png" alt="Card image cap">
+	<div class="card-body">
+      
+    </div>
+    <div class="card-footer">
+	<button type="button" id="bathroom" class="btn btn-primary btn-lg btn-block">Bath Room</button>
+	</div>
+     
+      
+    </div>
+  </div>
+</div>
+        </div>
+        
+        <!-- Modal footer -->
+        
+        
+      </div>
+    </div>
+  </div>
+      </div>
+  
+
+    <!-- The Modal -->
+  <div class="modal fade" id="listrooms">
+    <div class="modal-dialog modal-lg">-
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Select Room Style</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+		
+		<div class="card-deck">
+  <div class="card">
+    <img class="card-img-top" src="images/megnaplus.png"  alt="Card image cap">
+	<div class="card-body">
+      
+    </div>
+    <div class="card-footer">
+	<button type="button" id="png1" data="megnaplus" class="btn btn-primary btn-lg btn-block">Select</button>
+    
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="images/megnaplus.png"  alt="Card image cap">
+	<div class="card-body">
+      
+    </div>
+    <div class="card-footer">
+      <button type="button" class="btn btn-primary disabled btn-lg btn-block">Select</button>
+    </div>
+  </div>
+  
+  </div>
+</div>
+        </div>
+        
+        <!-- Modal footer -->
+        
+        </div>
+      </div>
+
+    
+	<!-- The Decorate Modal -->
+  <div class="modal fade" id="decorateroom">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Select the type of room you'd like to decorate</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+		
+		<div class="card-deck">
+  <div class="card">
+    <img class="card-img-top" src="images/floor.png"  height="200px"  alt="Card image cap">
+	<div class="card-body">
+      
+    </div>
+    <div class="card-footer">
+	<button type="button" id="floorbtn" class="btn btn-primary btn-lg btn-block">floor</button>
+    
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="images/wall.png" height="200px" alt="Card image cap">
+	<div class="card-body">
+      
+    </div>
+    <div class="card-footer">
+      <button type="button" class="btn disabled btn-primary btn-lg btn-block">Wall</button>
+    </div>
+  </div>
+
+
+
+  </div>
+</div>
+        </div>
+        
+        <!-- Modal footer -->
+        
+	<!-- The floors Modal -->
+  
+  </div>
+      </div>
+  
+
+	<div class="modal fade" id="floorroom">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Select floor tile to decorate</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+
+          <div class="row">
+            <div class="col-sm-4">
+  <div class="card">
+    <img class="card-img-top" src="images/tile/GM_001 Grey Matt.png"  height="200px"  alt="Card image cap">
+	<div class="card-body">
+      
+    </div>
+    <div class="card-footer">
+	<button type="button" id="timg-GM_001 Grey Matt" class="btn btn-primary btn-lg btn-block">Select</button>
+    
+    </div>
+  </div>
+            </div>
+            <div class="col-sm-4">
+  <div class="card">
+    <img class="card-img-top" src="images/tile/GM_002 Grey Matt.png" height="200px" alt="Card image cap">
+	<div class="card-body">
+      
+    </div>
+    <div class="card-footer">
+      <button type="button" id="timg-GM_002 Grey Matt" class="btn btn-primary btn-lg btn-block">Select</button>
+    </div>
+  </div>
+            </div>
+            <div class="col-sm-4">
+          <div class="card">
+            <img class="card-img-top" src="images/tile/GM_006 Light Grey Matt.png" height="200px" alt="Card image cap">
+            <div class="card-body">
+
+            </div>
+            <div class="card-footer">
+              <button type="button" id="timg-GM_006 Light Grey Matt" class="btn btn-primary btn-lg btn-block">Select</button>
+            </div>
+          </div>
+        </div>
+          </div>
+            <div class="row">
+              <div class="col-sm-4">
+          <div class="card">
+            <img class="card-img-top" src="images/tile/GM_005 Light Grey Matt Random1.png" height="200px" alt="Card image cap">
+            <div class="card-body">
+
+            </div>
+            <div class="card-footer">
+              <button type="button" id="timg-GM_005 Light Grey Matt Random1" class="btn btn-primary btn-lg btn-block">Select</button>
+            </div>
+          </div>
+              </div>
+              <div class="col-sm-4">
+          <div class="card">
+            <img class="card-img-top" src="images/tile/GP_003 Grey White Glossy Random1.png" height="200px" alt="Card image cap">
+            <div class="card-body">
+
+            </div>
+            <div class="card-footer">
+              <button type="button" id="timg-GP_003 Grey White Glossy Random1" class="btn btn-primary btn-lg btn-block">Select</button>
+            </div>
+          </div>
+              </div>
+              <div class="col-sm-4">
+          <div class="card">
+            <img class="card-img-top" src="images/tile/GP_004 Brown Glossy Random1.png" height="200px" alt="Card image cap">
+            <div class="card-body">
+
+            </div>
+            <div class="card-footer">
+              <button type="button" id="timg-GP_004 Brown Glossy Random1" class="btn btn-primary btn-lg btn-block">Select</button>
+            </div>
+          </div>
+              </div>
+            </div>
+        <div class="row">
+          <div class="col-sm-4">
+          <div class="card">
+    <img class="card-img-top" src="images/tile/GM_005 Light Grey Matt Random1.png" height="200px" alt="Card image cap">
+	<div class="card-body">
+      
+    </div>
+    <div class="card-footer">
+      <button type="button" class="btn btn-primary btn-lg btn-block">Select</button>
+    </div>
+  </div>
+          </div>
+        </div>
+        </div>
+</div>
+        </div>
+        
+        <!-- Modal footer -->
+        
+      </div>
+    </div>
+	
+	
+	
+	
+	
+	
+	<!-- Footer -->
+    <footer class="footer text-center">
+      <div class="container">
+        
+        <p class="text-muted small mb-0">Copyright &copy; Stile 2017</p>
+      </div>
+    </footer>
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded js-scroll-trigger" href="#page-top">
+      <i class="fa fa-angle-up"></i>
+    </a>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/stylish-portfolio.min.js"></script>
+	
+	<script>
+      var vroom;
+	$(document).ready(function() {
+   $('#bathroom').on('click', function() {
+      $('#selectroom').modal('hide'); 
+      $('#listrooms').modal('show');
+	  
+   });
+   
+   $('#png1').on('click', function() {
+       room = $(this).attr("data");
+    $("#maindisplay").removeClass("masthead");
+      $("#maindisplay").css('background', 'url(images/'+room+'.png) no-repeat 0 0');
+	  $("#maindisplay").css("height","800px");
+
+       $("#maindisplay").css('background-size','contain, cover');
+	   $('#listrooms').modal('hide');
+	   $("#srbtn").hide();
+		$("#drbtn").show();
+
+
+	//  $.get("creator.php", function(data, status){
+      
+    //}).done(function( data ) {
+    
+	
+  //});
+	  
+   });
+//
+    $('#floorbtn').on('click', function() {
+
+	 $('#decorateroom').modal('hide');
+     $('#floorroom').modal('show');
+//        $("#maindisplay").css('background', 'url(images/'+data+'.png) no-repeat 0 0');
+//        $("#maindisplay").css("height","1000px");
+
+//	 $.get("creator.php", function(data, status){
+//
+//    }).done(function( data ) {
+//    $("#maindisplay").css('background', 'url(images/'+data+'.png) no-repeat 0 0');
+//	  $("#maindisplay").css("height","1000px");
+//
+//  });
+//
+	});
+        var timg;
+        $(document).on('click', '[id^=timg-]', function (e) {
+            console.log("clicked");
+            timg = $(this).attr("id").split("-");
+            $(this).text("Loading...");
+            console.log(timg);
+            $.get("show2d.php?room="+room+"&tile="+timg[1], function(data, status){
+
+    }).done(function( data ) {
+//    $("#maindisplay").css('background', 'url(' +data+') no-repeat 0 0');
+	  $("#maindisplay").css("height","1100px");
+                $('#floorroom').modal('hide');
+                document.getElementById('maindisplay').style.backgroundImage = ('url(data:image/png;base64,' + data + ')');
+//console.log('url('+ 'data:image/png;base64,' +data+') no-repeat 0 0)');
+                $(timg).text("Select");
+  });
+        });
+});
+</script>
+  </body>
+
+</html>
