@@ -20,7 +20,8 @@
 
     <!-- Custom CSS -->
     <link href="css/stylish-portfolio.css" rel="stylesheet">
-	
+    <script src='https://unpkg.com/nprogress@0.2.0/nprogress.js'></script>
+    <link rel='stylesheet' href='https://unpkg.com/nprogress@0.2.0/nprogress.css'/>
 	
 
   </head>
@@ -149,17 +150,17 @@
 		
 		<div class="card-deck">
   <div class="card">
-    <img class="card-img-top" src="images/megnaplus.png"  alt="Card image cap">
+    <img class="card-img-top" src="http://res.cloudinary.com/halfbug/image/upload/v1519044046/Megnaplus.png"  alt="Card image cap">
 	<div class="card-body">
       
     </div>
     <div class="card-footer">
-	<button type="button" id="png1" data="megnaplus" class="btn btn-primary btn-lg btn-block">Select</button>
+	<button type="button" id="png1" data="Megnaplus" class="btn btn-primary btn-lg btn-block">Select</button>
     
     </div>
   </div>
   <div class="card">
-    <img class="card-img-top" src="images/megnaplus.png"  alt="Card image cap">
+    <img class="card-img-top" src="images/Megnaplus.png"  alt="Card image cap">
 	<div class="card-body">
       
     </div>
@@ -373,7 +374,7 @@
    $('#png1').on('click', function() {
        room = $(this).attr("data");
     $("#maindisplay").removeClass("masthead");
-      $("#maindisplay").css('background', 'url(images/'+room+'.png) no-repeat 0 0');
+      $("#maindisplay").css('background', 'url(http://res.cloudinary.com/halfbug/image/upload/v1519044046/'+room+'.png) no-repeat 0 0');
 	  $("#maindisplay").css("height","800px");
 
        $("#maindisplay").css('background-size','contain, cover');
@@ -411,17 +412,18 @@
         $(document).on('click', '[id^=timg-]', function (e) {
             console.log("clicked");
             timg = $(this).attr("id").split("-");
-            $(this).text("Loading...");
+            NProgress.start();
             console.log(timg);
+            $('#floorroom').modal('hide');
             $.get("show2d.php?room="+room+"&tile="+timg[1], function(data, status){
 
     }).done(function( data ) {
 //    $("#maindisplay").css('background', 'url(' +data+') no-repeat 0 0');
 	  $("#maindisplay").css("height","1100px");
-                $('#floorroom').modal('hide');
+//                $('#floorroom').modal('hide');
                 document.getElementById('maindisplay').style.backgroundImage = ('url(data:image/png;base64,' + data + ')');
 //console.log('url('+ 'data:image/png;base64,' +data+') no-repeat 0 0)');
-                $(timg).text("Select");
+                NProgress.done();
   });
         });
 });
